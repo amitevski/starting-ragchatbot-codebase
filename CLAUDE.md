@@ -32,6 +32,23 @@ This is a Course Materials RAG (Retrieval-Augmented Generation) system built wit
 cd backend && uv run uvicorn app:app --reload --port 8000
 ```
 
+### Code Quality
+```bash
+# Format code (black + isort)
+./scripts/format.sh
+
+# Run linting checks (flake8)
+./scripts/lint.sh
+
+# Run all quality checks (format + lint)
+./scripts/quality.sh
+
+# Manual commands
+uv run black .          # Format with black
+uv run isort .          # Sort imports
+uv run flake8 backend/  # Lint specific directory
+```
+
 ### Package Management
 ```bash
 # Install dependencies
